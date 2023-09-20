@@ -57,6 +57,18 @@ module API
                  type: 'Boolean',
                  required: false
 
+          schema :td_payback_likelihood_high,
+                  type: 'Float'
+
+          schema :td_payback_likelihood_medium,
+                  type: 'Float'              
+
+          schema :td_payback_likelihood_low,
+                  type: 'Float'
+
+          schema :td_principal,
+                 type: 'Float'
+
           schema :active,
                  type: 'Boolean',
                  required: false

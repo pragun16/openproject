@@ -182,6 +182,18 @@ module API
         property :active
         property :public
 
+        property :td_payback_likelihood_high,
+                  render_nil: true
+
+        property :td_payback_likelihood_medium,
+                  render_nil: true            
+
+        property :td_payback_likelihood_low,
+                  render_nil: true
+
+        property :td_principal,
+                  render_nil: true
+
         formattable_property :description
 
         date_time_property :created_at
