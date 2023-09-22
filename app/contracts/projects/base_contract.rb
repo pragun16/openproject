@@ -60,7 +60,7 @@ module Projects
               writable: true
 
     attribute :td_principal,
-              writable: true
+              writable: false
 
     validate :validate_user_allowed_to_manage
 
