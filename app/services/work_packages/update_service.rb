@@ -49,12 +49,7 @@ class WorkPackages::UpdateService < BaseServices::Update
   end
 
   def update_td_principal(wp)
-    td_sv_groups = WorkPackage.where.not(td_severity_value: nil).group('work_packages.td_severity_value').count
-
-    td_sv = wp[:td_severity_value]
-    td_et = wp[:td_estimated_time]
-    td_lr = wp[:td_labour_rate]
-    td_pl = wp[:td_payback_likelihood]
+    TechnicalDebtService.calculate_td_principal_for_project(wp.project)
   end
 
   def update_related_work_packages(service_call)
