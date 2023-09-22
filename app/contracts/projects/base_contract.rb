@@ -50,6 +50,18 @@ module Projects
       validate_templated_set_by_admin
     end
 
+    attribute :td_payback_likelihood_high,
+              writable: true
+
+    attribute :td_payback_likelihood_medium,
+              writable: true              
+
+    attribute :td_payback_likelihood_low,
+              writable: true
+
+    attribute :td_principal,
+              writable: false
+
     validate :validate_user_allowed_to_manage
 
     def assignable_parents

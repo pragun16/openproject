@@ -123,6 +123,15 @@ module API
         property :active
 
         property :public
+
+        property :td_payback_likelihood_high
+
+        property :td_payback_likelihood_medium 
+
+        property :td_payback_likelihood_low
+
+        property :td_principal
+
       end
     end
   end
