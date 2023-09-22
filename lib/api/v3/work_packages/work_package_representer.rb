@@ -431,7 +431,7 @@ module API
         property :td_severity_value,
                   render_nil: true
 
-        property :td_estimated_time,
+        property :td_estimated_hrs,
                   render_nil: true
 
         date_time_property :created_at

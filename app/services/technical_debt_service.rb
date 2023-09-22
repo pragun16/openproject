@@ -29,5 +29,13 @@
 class TechnicalDebtService
   def self.calculate_td_principal_for_project(project)
     project.update(td_principal: 999)
+
+    wp_severity_group_count = WorkPackage.where(project_id: project.id).group('td_severity_value').count
+    wp_severity_group_total_est = WorkPackage.where(project_id: project.id).group('td_severity_value').sum(:td_estimated_hrs)
+
+    raise "td_severity_group_mismatch" if wp_severity_group_count.keys.sort != wp_severity_group_total_est.keys.sort
+
+    td_principal = nil
+    wp_severi
   end
 end

@@ -48,7 +48,7 @@ module Type::AttributeGroups
         spent_time: :estimates_and_time,
         priority: :details,
         td_severity_value: :technical_debt,
-        td_estimated_time: :technical_debt
+        td_estimated_hrs: :technical_debt
       }
     end
 

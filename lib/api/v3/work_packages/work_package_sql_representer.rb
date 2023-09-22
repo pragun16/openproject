@@ -60,7 +60,7 @@ module API
 
         property :td_severity_value
 
-        property :td_estimated_time
+        property :td_estimated_hrs
 
         property :startDate, column: :start_date,
                              render_if: ->(*) { "is_milestone != true" },

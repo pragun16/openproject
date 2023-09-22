@@ -59,6 +59,9 @@ module Projects
     attribute :td_payback_likelihood_low,
               writable: true
 
+    attribute :td_labour_rate,
+              writable: true
+
     attribute :td_principal,
               writable: true
 

@@ -199,7 +199,7 @@ module API
           schema :td_severity_value,
                  type: 'String'
 
-          schema :td_estimated_time,
+          schema :td_estimated_hrs,
                  type: 'Float'
 
           schema_with_allowed_link :project,

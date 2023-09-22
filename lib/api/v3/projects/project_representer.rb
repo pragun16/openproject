@@ -191,6 +191,9 @@ module API
         property :td_payback_likelihood_low,
                   render_nil: true
 
+        property :td_labour_rate,
+                  render_nil: true
+
         property :td_principal,
                   render_nil: true
 
