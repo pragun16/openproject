@@ -43,7 +43,13 @@ class WorkPackages::UpdateService < BaseServices::Update
     update_related_work_packages(service_call)
     cleanup(service_call.result)
 
+    update_td_principal(service_call.result) if params.keys.any?{|k| k.to_s.starts_with?('td_').present?}
+
     service_call
+  end
+
+  def update_td_principal(wp)
+    TechnicalDebtService.calculate_td_principal_for_project(wp.project)
   end
 
   def update_related_work_packages(service_call)

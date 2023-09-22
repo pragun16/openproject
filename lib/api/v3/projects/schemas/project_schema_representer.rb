@@ -66,6 +66,9 @@ module API
           schema :td_payback_likelihood_low,
                   type: 'Float'
 
+          schema :td_labour_rate,
+                  type: 'Float'
+
           schema :td_principal,
                  type: 'Float'
 

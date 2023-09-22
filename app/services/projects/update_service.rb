@@ -49,7 +49,13 @@ module Projects
       update_wp_versions_on_parent_change
       handle_archiving
 
+      update_td_principal(service_call.result)
+
       service_call
+    end
+
+    def update_td_principal(project)
+      TechnicalDebtService.calculate_td_principal_for_project(project)
     end
 
     def touch_on_custom_values_update

@@ -106,7 +106,7 @@ module WorkPackages
     attribute :td_severity_value,
               writable: true
 
-    attribute :td_estimated_time,
+    attribute :td_estimated_hrs,
               writable: true
 
     validates :due_date,

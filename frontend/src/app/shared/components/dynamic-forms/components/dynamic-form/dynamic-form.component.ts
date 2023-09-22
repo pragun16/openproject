@@ -278,6 +278,10 @@ export class DynamicFormComponent extends UntilDestroyedMixin implements OnChang
       )
       .subscribe(
         (formResponse:HalSource|any) => {
+          this.model = {
+            ...this.model,
+            tdPrincipal: formResponse.tdPrincipal
+          }
           this.submitted.emit(formResponse);
           this.showNotifications && this.showSuccessNotification(formResponse);
         },
