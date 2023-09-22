@@ -60,13 +60,7 @@ module API
 
         property :td_severity_value
 
-        property :td_labour_rate
-
         property :td_estimated_time
-
-        property :td_payback_likelihood
-
-        property :td_principal
 
         property :startDate, column: :start_date,
                              render_if: ->(*) { "is_milestone != true" },
