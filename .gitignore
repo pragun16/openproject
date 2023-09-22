@@ -148,3 +148,6 @@ acme.json
 
 # asdf tool version
 .tool-versions
+
+# ignore database.yml
+config/database.yml

@@ -47,11 +47,8 @@ module Type::AttributeGroups
         estimated_time: :estimates_and_time,
         spent_time: :estimates_and_time,
         priority: :details,
-        td_payback_likelihood: :technical_debt,
         td_severity_value: :technical_debt,
-        td_labour_rate: :technical_debt,
-        td_estimated_time: :technical_debt,
-        td_principal: :technical_debt
+        td_estimated_time: :technical_debt
       }
     end
 
