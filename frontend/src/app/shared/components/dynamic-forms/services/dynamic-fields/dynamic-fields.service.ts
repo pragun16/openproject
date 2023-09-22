@@ -178,7 +178,7 @@ export class DynamicFieldsService {
 
         return fieldSchema;
       })
-      .filter((fieldSchema) => this.isFieldSchema(fieldSchema) && fieldSchema.writable);
+      .filter((fieldSchema) => this.isFieldSchema(fieldSchema) && (fieldSchema.writable || (fieldSchema.key == "tdPrincipal")));
   }
 
   private getAttributeKey(fieldSchema:IOPFieldSchema, key:string):string {

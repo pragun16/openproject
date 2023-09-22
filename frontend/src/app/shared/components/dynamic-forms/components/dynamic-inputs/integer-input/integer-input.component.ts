@@ -7,4 +7,7 @@ import { FieldType } from '@ngx-formly/core';
   styleUrls: ['./integer-input.component.scss'],
 })
 export class IntegerInputComponent extends FieldType {
+  isTdPrincipalField(): boolean {
+    return this.key == 'tdPrincipal';
+  }
 }
