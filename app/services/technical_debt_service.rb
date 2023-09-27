@@ -37,6 +37,7 @@ class TechnicalDebtService
       wp_severity_group_count[k] * project.public_send("td_payback_likelihood_#{k}") * wp_severity_group_total_est[k] * project.td_labour_rate
     end.sum
 
+    raise "invalid td_principal calculated" if td_principal < 0
     project.update(td_principal: td_principal)
   end
 end
